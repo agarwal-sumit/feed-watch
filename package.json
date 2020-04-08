@@ -1,6 +1,6 @@
 {
   "name": "feed-watch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A highly configurable lightweight module for watching/emitting changes in rss feeds",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
