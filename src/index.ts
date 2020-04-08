@@ -78,8 +78,10 @@ export default class FeedWatch extends EventEmitter {
     };
     this.feedList.push(feed);
     await this.fetchAndUpdateItems(feed, true);
+    // eslint-disable-next-line no-underscore-dangle
+    const _this = this;
     feed.timer = setInterval(function() {
-      this.fetchAndUpdateItems(feed);
+      _this.fetchAndUpdateItems(feed);
     }, config.refreshRateInSecs * 1000);
   }
 
