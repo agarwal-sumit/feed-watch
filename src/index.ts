@@ -66,6 +66,10 @@ export default class FeedWatch extends EventEmitter {
         });
         return false;
       });
+      if (feedItems[0]) {
+        // eslint-disable-next-line no-param-reassign
+        feed.lastUid = feed.config.uidGenerator(feedItems[0]);
+      }
     } catch (err) {
       this.emit('error', err);
     }
