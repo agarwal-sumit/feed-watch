@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 10,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/extensions": [".js",".jsx",".ts",".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts",".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx",".ts",".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": [
+       "error",
+       "ignorePackages",
+       {
+         "js": "never",
+         "jsx": "never",
+         "ts": "never",
+         "tsx": "never"
+       }
+    ],
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "no-useless-constructor": "off"
+ }
+}

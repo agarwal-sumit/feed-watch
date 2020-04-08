@@ -1,0 +1,63 @@
+{
+  "name": "feed-watch",
+  "version": "0.1.0",
+  "description": "A highly configurable lightweight module for watching/emitting changes in rss feeds",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "keywords": [
+    "rss",
+    "feed",
+    "atom",
+    "rdf",
+    "xml",
+    "syndication",
+    "rsscloud",
+    "rss watch",
+    "rss emit",
+    "feedwatch"
+  ],
+  "scripts": {
+    "clean-build": "rm -rf dist/ rm -rf node_modules/ && npm install && tsc -p tsconfig.json",
+    "build": "rm -rf lib/ && tsc -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "version": "npm run format",
+    "test": "TS_NODE_FILES=true mocha -r ts-node/register --files . src/tests/*.spec.ts"
+  },
+  "dependencies": {
+    "@types/mocha": "^7.0.2",
+    "axios": "^0.19.2",
+    "feedparser": "^2.2.9",
+    "iconv": "^2.3.5",
+    "zlib": "^1.0.5"
+  },
+  "author": "Sumit Agarwal <sa.sumit@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/agarwal-sumit/feed-watch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agarwal-sumit/feed-watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agarwal-sumit/feed-watch/issues"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^7.1.1",
+    "prettier": "1.19.1",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^3.8.3"
+  }
+}

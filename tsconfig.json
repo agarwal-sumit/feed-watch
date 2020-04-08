@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "./lib",
+    "incremental": true,
+    "types": ["node", "mocha"],
+    "typeRoots": [
+      "src/types"
+    ]
+  },
+  "exclude": ["node_modules", ".vscode", "lib"]
+}
