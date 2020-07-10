@@ -71,6 +71,7 @@ export default class FeedWatch extends EventEmitter {
         feed.lastUid = feed.config.uidGenerator(feedItems[0]);
       }
     } catch (err) {
+      err.message = `${feed.config.url}: ${err.message}`;
       this.emit('error', err);
     }
   }
