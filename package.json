@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@types/mocha": "^7.0.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "feedparser": "^2.2.9",
     "iconv": "^2.3.5",
     "zlib": "^1.0.5"
